@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "3b3907a75d4c8030",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "074cb5dd9dd4d4d6",
         "type": "inject",
         "z": "56da16a844402e59",
@@ -159,6 +167,54 @@
         "headers": {},
         "x": 730,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "fd7b2219c48c5a84",
+        "type": "http in",
+        "z": "3b3907a75d4c8030",
+        "name": "",
+        "url": "/teste",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "84bbabdf81575bdb"
+            ]
+        ]
+    },
+    {
+        "id": "84bbabdf81575bdb",
+        "type": "function",
+        "z": "3b3907a75d4c8030",
+        "name": "function 1",
+        "func": "msg ='testes'\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 240,
+        "wires": [
+            [
+                "f9abc6dc5c73ed2b"
+            ]
+        ]
+    },
+    {
+        "id": "f9abc6dc5c73ed2b",
+        "type": "http response",
+        "z": "3b3907a75d4c8030",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 240,
         "wires": []
     }
 ]
